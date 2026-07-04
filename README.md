@@ -21,3 +21,5 @@ Platform Sections
 🌍 Community Projects
 📖 Constitution
 👤 Welcome Back
+
+AMORYTA Genesis Alpha
