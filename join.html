@@ -24,21 +24,33 @@ Today, that decision could be yours.
 
 <h3>📷 Your Journey Portrait</h3>
 
-<input type="text" placeholder="What should fellow Amities call you?">
+<input
+type="text"
+id="name"
+placeholder="What should fellow Amities call you?"
+required>
 
 <br><br>
 
-<input type="tel" placeholder="WhatsApp Number">
-
+<input
+type="tel"
+id="phone"
+placeholder="WhatsApp Number"
+required>
+    
 <br><br>
 
-<input type="password" placeholder="Create Your PASSKEY">
+<input
+type="password"
+id="passkey"
+placeholder="Create Your PASSKEY"
+required>
 
 <br><br>
 
 <h3>🎨 Choose Your Team</h3>
 
-<select>
+<select id="team">
 
 <option>🤍 ALPHA</option>
 
@@ -64,13 +76,17 @@ Today, that decision could be yours.
 
 <h3>🪣 Drop Your Bucket Message</h3>
 
-<textarea rows="6" placeholder="Leave an idea, encouragement, opportunity, support, dream, challenge or vision."></textarea>
+<textarea
+id="bucket" rows="6" placeholder="Leave an idea, encouragement, opportunity, support, dream, challenge or vision."></textarea>
 
 <br><br>
 
 <label>
 
-<input type="checkbox">
+<input
+type="checkbox"
+id="constitution"
+required>
 
 I agree to the Constitution
 
@@ -82,7 +98,7 @@ I agree to the Constitution
 
 🌱 Begin My Journey
 
-</button>
+<button type="submit">
 
 <br><br><br>
 
