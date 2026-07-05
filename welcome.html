@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Welcome</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌱 Welcome to AMORYTA</h1>
+
+<h2 id="memberName"></h2>
+
+<p id="memberID"></p>
+
+<p id="team"></p>
+
+</div>
+
+<script>
+
+const member = JSON.parse(localStorage.getItem("amorytaMember"));
+
+document.getElementById("memberName").innerHTML = member.name;
+
+document.getElementById("memberID").innerHTML = "Member ID: " + member.memberID;
+
+document.getElementById("team").innerHTML = "Team: " + member.team;
+
+</script>
+
+</body>
+
+</html>
