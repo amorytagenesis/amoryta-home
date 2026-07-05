@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
 
-<title>Welcome</title>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Welcome Back</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,13 +17,27 @@
 
 <div class="container">
 
-<h1>🌱 Welcome to AMORYTA</h1>
+<h1>🌱 Welcome, Amity!</h1>
 
 <h2 id="memberName"></h2>
 
+<p><strong>Member ID</strong></p>
+
 <p id="memberID"></p>
 
-<p id="team"></p>
+<p><strong>Team</strong></p>
+
+<p id="memberTeam"></p>
+
+<p><strong>Your Bucket Message</strong></p>
+
+<p id="memberBucket"></p>
+
+<br>
+
+<button onclick="logout()">
+🚪 Logout
+</button>
 
 </div>
 
@@ -28,11 +45,29 @@
 
 const member = JSON.parse(localStorage.getItem("amorytaMember"));
 
+if(member){
+
 document.getElementById("memberName").innerHTML = member.name;
 
-document.getElementById("memberID").innerHTML = "Member ID: " + member.memberID;
+document.getElementById("memberID").innerHTML = member.memberID;
 
-document.getElementById("team").innerHTML = "Team: " + member.team;
+document.getElementById("memberTeam").innerHTML = member.team;
+
+document.getElementById("memberBucket").innerHTML = member.bucket;
+
+}else{
+
+window.location.href="join.html";
+
+}
+
+function logout(){
+
+localStorage.removeItem("amorytaMember");
+
+window.location.href="index.html";
+
+}
 
 </script>
 
