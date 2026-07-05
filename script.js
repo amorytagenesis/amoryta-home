@@ -1,5 +1,4 @@
 document.getElementById("joinForm").addEventListener("submit", function(e) {
-
     e.preventDefault();
 
     const member = {
@@ -7,14 +6,12 @@ document.getElementById("joinForm").addEventListener("submit", function(e) {
         phone: document.getElementById("phone").value,
         passkey: document.getElementById("passkey").value,
         team: document.getElementById("team").value,
-        bucket: document.getElementById("bucket").value,
-        memberID: "AM-" + Date.now()
+        bucket: document.getElementById("bucket").value
     };
 
+    // Save member to browser
     localStorage.setItem("amorytaMember", JSON.stringify(member));
 
-    alert("🌱 Welcome to AMORYTA!");
-
+    // Go to Welcome page
     window.location.href = "welcome.html";
-
 });
