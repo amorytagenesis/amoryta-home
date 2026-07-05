@@ -1,36 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Welcome Back</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>🌱 Welcome, Amity!</h1>
+<h1>🌱 Welcome Home</h1>
 
 <h2 id="memberName"></h2>
 
-<p><strong>Member ID</strong></p>
-
-<p id="memberID"></p>
-
-<p><strong>Team</strong></p>
-
+<p><strong>Your Team</strong></p>
 <p id="memberTeam"></p>
 
 <p><strong>Your Bucket Message</strong></p>
-
 <p id="memberBucket"></p>
 
 <br>
@@ -48,8 +36,6 @@ const member = JSON.parse(localStorage.getItem("amorytaMember"));
 if(member){
 
 document.getElementById("memberName").innerHTML = member.name;
-
-document.getElementById("memberID").innerHTML = member.memberID;
 
 document.getElementById("memberTeam").innerHTML = member.team;
 
@@ -72,5 +58,4 @@ window.location.href="index.html";
 </script>
 
 </body>
-
 </html>
