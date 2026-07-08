@@ -3,6 +3,9 @@
 AMORYTA Genesis Alpha
 Configuration File
 ========================================
+Founder: Barhbis
+Technical Architect: Zoe
+========================================
 */
 
 const CONFIG = {
@@ -11,11 +14,10 @@ const CONFIG = {
 
     VERSION: "Genesis Alpha v0.3.0",
 
-    /*
-    Replace this after we deploy
-    the Google Apps Script Web App.
-    */
+    API_URL: "https://script.google.com/macros/s/AKfycbxcZmiiJpVQPZH2G2QkeTGcVKwhajSK8AxmUKhMO5tHUVapGQUcaST9-Ez8NKE3jgV4/exec",
 
-    API_URL: ""
+    STORAGE_KEY: "AMORYTA_USER",
+
+    DEBUG: true
 
 };
