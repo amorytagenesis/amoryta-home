@@ -1,17 +1,55 @@
-document.getElementById("joinForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+/*
+==========================================
+AMORYTA Genesis
+Room 001 – Identity Engine
+File: auth.js
+Version: 1.0.0
+Status: Active
+==========================================
+*/
 
-    const member = {
-        name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
-        passkey: document.getElementById("passkey").value,
-        team: document.getElementById("team").value,
-        bucket: document.getElementById("bucket").value
-    };
+async function registerAmity(userData) {
 
-    // Save member to browser
-    localStorage.setItem("amorytaMember", JSON.stringify(member));
+    try {
 
-    // Go to Welcome page
-    window.location.href = "welcome.html";
-});
+        const response = await fetch(CONFIG.API_URL, {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type": "application/json"
+
+            },
+
+            body: JSON.stringify({
+
+                action: "register",
+
+                data: userData
+
+            })
+
+        });
+
+        const result = await response.json();
+
+        return result;
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+        return {
+
+            success: false,
+
+            message: "Unable to connect to AMORYTA."
+
+        };
+
+    }
+
+}
