@@ -1,10 +1,22 @@
+<!--
+==========================================
+AMORYTA Genesis
+Room 001 – Identity Engine
+File: join.html
+Version: 1.0.0
+Status: Active
+==========================================
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Become an Amity</title>
+<title>Become an Amity • AMORYTA</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -13,7 +25,8 @@
 <body>
 
 <div class="container">
-  <form id="joinForm">
+
+<form id="joinForm">
 
 <h1>🌱 Become an Amity</h1>
 
@@ -22,12 +35,22 @@ Every great community begins with one decision.
 Today, that decision could be yours.
 </p>
 
-<h3>📷 Your Journey Portrait</h3>
+<hr>
+
+<h3>🪪 Your Identity</h3>
 
 <input
 type="text"
-id="name"
-placeholder="What should fellow Amities call you?"
+id="username"
+placeholder="Choose a permanent Username"
+required>
+
+<br><br>
+
+<input
+type="text"
+id="displayName"
+placeholder="Display Name (can be changed later)"
 required>
 
 <br><br>
@@ -37,7 +60,7 @@ type="tel"
 id="phone"
 placeholder="WhatsApp Number"
 required>
-    
+
 <br><br>
 
 <input
@@ -50,38 +73,39 @@ required>
 
 <h3>🎨 Choose Your Team</h3>
 
-<select id="team">
+<select id="team" required>
 
-<option>🤍 ALPHA</option>
+<option value="">-- Select Your Team --</option>
 
-<option>💛 TRENDSETTER</option>
+<option value="ALPHA">🤍 ALPHA</option>
 
-<option>💙 INNOVATOR</option>
+<option value="TRENDSETTER">💛 TRENDSETTER</option>
 
-<option>💜 VISIONARY</option>
+<option value="INNOVATOR">💙 INNOVATOR</option>
 
-<option>🤎 MAVERICK</option>
+<option value="VISIONARY">💜 VISIONARY</option>
 
-<option>🧡 TRAILBLAZER</option>
+<option value="MAVERICK">🤎 MAVERICK</option>
 
-<option>💚 CULTIVATOR</option>
+<option value="TRAILBLAZER">🧡 TRAILBLAZER</option>
 
-<option>❤️ CATALYST</option>
+<option value="CULTIVATOR">💚 CULTIVATOR</option>
 
-<option>🖤 GUARDIAN</option>
+<option value="CATALYST">❤️ CATALYST</option>
+
+<option value="GUARDIAN">🖤 GUARDIAN</option>
 
 </select>
 
 <br><br>
 
-<h3>🪣 Drop Your Bucket Message</h3>
+<h3>🪣 Your First Bucket Message</h3>
 
 <textarea
 id="bucket"
 rows="6"
-placeholder="Leave an idea, encouragement, opportunity, support, dream, challenge or vision."
-required>
-</textarea>
+placeholder="Share an idea, dream, encouragement, opportunity or vision..."
+required></textarea>
 
 <br><br>
 
@@ -92,14 +116,16 @@ type="checkbox"
 id="constitution"
 required>
 
-I agree to the Constitution
+I agree to the AMORYTA Constitution.
 
 </label>
 
 <br><br>
 
 <button type="submit">
+
 🌱 Begin My Journey
+
 </button>
 
 <br><br><br>
@@ -113,9 +139,13 @@ Already an Amity?
 </p>
 
 </form>
+
 </div>
 
+<script src="config.js"></script>
+<script src="auth.js"></script>
 <script src="script.js"></script>
 
 </body>
+
 </html>
