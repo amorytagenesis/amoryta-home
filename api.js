@@ -31,3 +31,32 @@ async function postRequest(data) {
   return await response.json();
 
 }
+
+
+/*
+=========================================================
+REGISTER AMITY
+=========================================================
+*/
+
+async function registerAmity(userData) {
+
+  try {
+
+    const result = await postRequest(userData);
+
+    return result;
+
+  } catch (error) {
+
+    return {
+
+      success: false,
+
+      message: "Unable to connect to AMORYTA server."
+
+    };
+
+  }
+
+}
