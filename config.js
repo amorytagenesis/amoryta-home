@@ -14,7 +14,7 @@ const CONFIG = {
 
     VERSION: "Genesis Alpha v0.3.0",
 
-    API_URL: "https://script.google.com/macros/s/AKfycbxcZmiiJpVQPZH2G2QkeTGcVKwhajSK8AxmUKhMO5tHUVapGQUcaST9-Ez8NKE3jgV4/exec",
+    API_URL: "https://script.google.com/macros/s/AKfycbxZOVPehnzqqcF2AS4DufUmD74ImoAGHf-3AA2TSEZKo6ZDoua33W-i63l_iNZa5nvu/exec",
 
     STORAGE_KEY: "AMORYTA_USER",
 
